@@ -1,5 +1,6 @@
 a<!-- Styles -->
 <!--{{ asset('css/app.css') }} : asset access public folder -->
+<link href="{{ asset('css/sweetalert.css') }}" rel="stylesheet" type="text/css" >
 <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 

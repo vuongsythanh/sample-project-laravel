@@ -11,9 +11,16 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
-
-Route::get('/test', 'TestController@index');
-
+// Auth routes
 Auth::routes();
+// home page route
+Route::get('/', 'PagesController@index');
+// test route
+Route::get('test','TestController@index');
+// Widget routes
+Route::get('widget/create', 'WidgetController@create')->name('widget.create');
+Route::get('widget/{widget}-{slug?}', 'WidgetController@show')->name('widget.show');
+Route::resource('widget', 'WidgetController', ['except' => ['show', 'create']]);
+
+Route::patch('widget/{widget}', 'WidgetController@update');
 

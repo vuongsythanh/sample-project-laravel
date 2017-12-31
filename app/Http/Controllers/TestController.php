@@ -13,8 +13,7 @@ class TestController extends Controller
      */
     public function index()
     {
-        $mang = ['thanh', 'lam', 'long', 'quan'];
-        return view('test.index', compact('mang'));
+        throw new EmailNotProvidedException('facebook');
     }
 
     /**
